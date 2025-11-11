@@ -1,5 +1,6 @@
 import cv2
 from detector import detect_face
+
 def main():
     cv2.namedWindow("AURA")
     cap=cv2.VideoCapture(0)
@@ -12,7 +13,8 @@ def main():
 
 
     while rval:
-        frame=detect_face(frame)
+        frame,landmarks=detect_face(frame)
+        
         cv2.imshow("AURA",frame)
         rval,frame=cap.read()
         key=cv2.waitKey(20)

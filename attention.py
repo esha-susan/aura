@@ -1,8 +1,8 @@
 import numpy as npy
 
 
-def check_attention(landmarks,frame_width,frame_height):
-    nose=landmarks[1]
+def check_head_status(landmarks,frame_width,frame_height):
+    nose=landmarks.landmark[1]
     nose_x=nose.x*frame_width
     nose_y=nose.y*frame_height
     

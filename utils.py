@@ -30,7 +30,7 @@ def get_eye_status(landmarks,frame_shape,eyes_closed_start,alarm_on):
                     if not alarm_on:
                         threading.Thread(target=playsound("fifths.wav"),daemon=True).start()
                         alarm_on=True
-                    alert_text="Dot Sleep"
+                    alert_text="Don't Sleep"
                    
             else:
                 eye_score=1.0
